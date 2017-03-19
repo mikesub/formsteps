@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/no-unresolved": 0,
+    "import/extensions": 0
+  }
+}
