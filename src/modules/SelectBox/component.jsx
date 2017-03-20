@@ -1,13 +1,17 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import handle from './actions';
+import css from './index.css';
 
 const SelectBox = ({ items, selected, onChange }) => (
-  <div>
+  <div className={css.wrap}>
     <select value={selected} onChange={onChange}>
       <option>...</option>
       {items.map(i => <option key={i} value={i}>{i}</option>)}
     </select>
+    <div className={css.label}>
+      Select your C
+    </div>
   </div>
 );
 

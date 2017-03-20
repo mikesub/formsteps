@@ -1,0 +1,10 @@
+.wrap {
+  border-top: 1px solid #ccc;
+  margin-bottom: 8px;
+  padding: 8px 10px 0px 10px;
+}
+
+.label {
+  display: inline;
+  margin-left: 8px;
+}
