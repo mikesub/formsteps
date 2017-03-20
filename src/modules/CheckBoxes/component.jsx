@@ -1,13 +1,14 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import handle from './actions';
+import css from './index.css';
 
 const CheckBoxes = ({ checkboxes, onChange }) => (
-  <div>
+  <div className={css.wrap}>
     {Object.keys(checkboxes).map(i => (
-      <div key={i}>
-        <label htmlFor={i}>{i}</label>
+      <div key={i} className={css.item}>
         <input id={i} type="checkbox" checked={checkboxes[i]} onChange={onChange} />
+        <label htmlFor={i} className={css.label}>{i}</label>
       </div>
     ))}
   </div>
