@@ -13,3 +13,9 @@
   display: inline-block;
   color: indianred;
 }
+
+.result {
+  margin-left: 4px;
+  font-size: 12px;
+  display: block;
+}

@@ -4,6 +4,7 @@ const initialState = {
   pending: false,
   error: false,
   errorMessage: '',
+  result: false,
 };
 
 const reducer = (state, action) => {
@@ -13,6 +14,7 @@ const reducer = (state, action) => {
         error: Boolean(action.error),
         errorMessage: action.error ? action.payload.message : '',
         pending: action.pending,
+        result: (action.error || action.pending) ? false : action.payload,
       };
     }
     default:

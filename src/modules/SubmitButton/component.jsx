@@ -18,12 +18,20 @@ const buttonText = (pending, error) => {
   return 'Submit';
 };
 
-const SubmitButton = ({ pending, error, errorMessage, onClick }) => (
+const Result = ({ data }) =>
+    (data ? <pre className={css.result}>{JSON.stringify(data)}</pre> : null);
+
+Result.propTypes = {
+  data: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]).isRequired,
+};
+
+const SubmitButton = ({ pending, error, errorMessage, onClick, result }) => (
   <div className={css.wrap}>
     <button onClick={onClick} disabled={pending} className={css.button}>
       {buttonText(pending, error)}
     </button>
     <Message text={error ? errorMessage : ''} />
+    <Result data={result} />
   </div>
 );
 
@@ -32,6 +40,7 @@ SubmitButton.propTypes = {
   error: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
+  result: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]).isRequired,
 };
 
 export default connect(
