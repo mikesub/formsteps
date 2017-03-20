@@ -7,6 +7,9 @@ const initialState = {
   value: 1,
 };
 
+// while modules are not coupled, here you need to know internals of other stores
+// TODO: refactor to use a designated "public" key for each module's value
+
 const calc = ({ checkboxes, togglebuttons, textfield, selectbox }) =>
   takeWhile([
     some(values(checkboxes)),
