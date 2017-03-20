@@ -1,0 +1,15 @@
+.wrap {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.button {
+  width: 100px;
+}
+
+.message {
+  margin-left: 4px;
+  font-size: 12px;
+  display: inline-block;
+  color: indianred;
+}
