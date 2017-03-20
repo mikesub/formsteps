@@ -14,6 +14,9 @@ const reducer = (state, action) => {
       return {
         value: action.payload,
         validated: false,
+        error: false,
+        pending: false,
+        errorMessage: '',
       };
     }
     case A.TEXTFIELD_CHECKED: {
