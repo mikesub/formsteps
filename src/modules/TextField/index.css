@@ -1,6 +1,6 @@
 .wrap {
-  border-top: 1px solid black;
-  padding-top: 8px;
+  border-top: 1px solid #ccc;
+  padding: 8px 10px 0px 10px;
   margin-bottom: 8px;
 }
 
