@@ -1,4 +1,5 @@
 import React from 'react';
+import 'normalize.css';
 import CheckBoxes from '../CheckBoxes/component.jsx';
 import ToggleButtons from '../ToggleButtons/component.jsx';
 import SelectBox from '../SelectBox/component.jsx';
