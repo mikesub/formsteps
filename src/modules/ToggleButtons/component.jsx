@@ -1,11 +1,20 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import cs from 'classnames';
 import handle from './actions';
+import css from './index.css';
 
 const ToggleButtons = ({ items, selected, onClick }) => (
-  <div>
+  <div className={css.wrap}>
     {items.map(i => (
-      <button key={i} onClick={onClick} id={i}>{i}{i === selected ? ' on' : ' off'}</button>
+      <button
+        key={i}
+        id={i}
+        onClick={onClick}
+        className={cs(css.button, { [css.selected]: i === selected })}
+      >
+        {i}
+      </button>
     ))}
   </div>
 );
