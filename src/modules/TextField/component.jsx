@@ -10,11 +10,30 @@ Message.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
+const buttonTitle = (pending, validated) => {
+  if (pending) {
+    return 'Checking...';
+  }
+  if (validated) {
+    return 'Checked';
+  }
+  return 'Check';
+};
+
 const TextField = ({ value, pending, validated, error, errorMessage, onChange, onClick }) => (
   <div className={css.wrap}>
-    <input type="text" onChange={onChange} value={value} className={cs(css.input, {[css.error]: error }) } />
-    <button onClick={onClick} disabled={pending || validated} className={css.button}>
-      {pending ? 'Checking' : 'Check'}
+    <input
+      type="text"
+      onChange={onChange}
+      value={value}
+      className={cs(css.input, { [css.error]: error })}
+    />
+    <button
+      onClick={onClick}
+      disabled={pending || validated}
+      className={cs(css.button, { [css.ok]: !pending && validated })}
+    >
+      {buttonTitle(pending, validated)}
     </button>
     <Message text={error ? errorMessage : ''} />
   </div>

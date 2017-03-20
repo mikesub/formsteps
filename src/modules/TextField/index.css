@@ -26,3 +26,7 @@ input.error {
   display: inline-block;
   color: indianred;
 }
+
+.ok {
+  color: mediumseagreen;
+}
