@@ -4,6 +4,7 @@ import { checkIt } from '../../api.js';
 import types from './types.js';
 
 const handle = value => actionHelper(types.TEXTFIELD_CHANGED, value);
+const reset = () => actionHelper(types.TEXTFIELD_RESET);
 
 const check = () => (dispatch, getState) => {
   promiseAction(
@@ -16,4 +17,5 @@ const check = () => (dispatch, getState) => {
 export {
   handle,
   check,
+  reset,
 };

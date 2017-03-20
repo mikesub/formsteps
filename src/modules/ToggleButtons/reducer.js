@@ -7,6 +7,11 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case A.TOGGLEBUTTONS_RESET: {
+      return {
+        selected: '',
+      };
+    }
     case A.TOGGLEBUTTONS_CLICKED: {
       return {
         selected: action.payload,

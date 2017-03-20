@@ -10,6 +10,9 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case A.TEXTFIELD_RESET: {
+      return initialState;
+    }
     case A.TEXTFIELD_CHANGED: {
       return {
         value: action.payload,

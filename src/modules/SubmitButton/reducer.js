@@ -9,6 +9,9 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case A.SUBMITBUTTON_RESET: {
+      return initialState;
+    }
     case A.SUBMITBUTTON_CLICKED: {
       return {
         error: Boolean(action.error),

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import handle from './actions';
+import { handle } from './actions';
 import css from './index.css';
 
 const SelectBox = ({ items, selected, onChange }) => (

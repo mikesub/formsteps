@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import cs from 'classnames';
-import handle from './actions';
+import { handle } from './actions';
 import css from './index.css';
 
 const ToggleButtons = ({ items, selected, onClick }) => (

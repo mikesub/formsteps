@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import submit from './actions';
+import { submit } from './actions';
 import css from './index.css';
 
 const Message = ({ text }) => (text ? <div className={css.message}>{text}</div> : null);

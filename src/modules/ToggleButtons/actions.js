@@ -1,4 +1,10 @@
 import types from './types.js';
 import actionHelper from '../../utils/actionCreator.js';
 
-export default value => actionHelper(types.TOGGLEBUTTONS_CLICKED, value);
+const handle = value => actionHelper(types.TOGGLEBUTTONS_CLICKED, value);
+const reset = () => actionHelper(types.TOGGLEBUTTONS_RESET);
+
+export {
+  handle,
+  reset,
+};

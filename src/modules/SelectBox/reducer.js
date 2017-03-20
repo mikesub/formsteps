@@ -6,6 +6,11 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case A.SELECTBOX_RESET: {
+      return {
+        selected: '',
+      };
+    }
     case A.SELECTBOX_SELECTED: {
       return {
         selected: action.payload || '',
